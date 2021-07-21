@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "133581032217",
+    "project_id": "marketlii",
+    "storage_bucket": "marketlii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133581032217:android:1ae3f1afc3271a3d761388",
+        "android_client_info": {
+          "package_name": "com.osamam.marketlii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133581032217-vaf1vt41asqd18mffvgmqv28e7i6macb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.osamam.marketlii",
+            "certificate_hash": "f93d21d45488f899c914267ac7265b4586055d51"
+          }
+        },
+        {
+          "client_id": "133581032217-uab395t9ifotehcdtgj5phbdm3197h5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUNCjq_VMJSJPciL1D83wrly7ZhgawYXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133581032217-uab395t9ifotehcdtgj5phbdm3197h5f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

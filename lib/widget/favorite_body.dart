@@ -1,0 +1,107 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:marketlii/provider/home_providers/favorite_provider.dart';
+import 'package:provider/provider.dart';
+
+Widget favoriteBody(context) {
+  return Padding(
+      padding: const EdgeInsets.only(
+        top: 40,
+        left: 20,
+        right: 20,
+        bottom: 20,
+      ),
+      child: Container(
+        child: Consumer<FavoriteProvider>(
+          builder: (_, pragma, __) {
+            Widget content = pragma.getFavoriteModelData == null
+                ? Center(child: CircularProgressIndicator())
+                : pragma.list.data[0].name;
+            return content;
+          },
+        ),
+        // child: Stack(
+        //   children: [
+        //     GridView.builder(
+        //       physics: NeverScrollableScrollPhysics(),
+        //       shrinkWrap: true,
+        //       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        //         crossAxisCount: 2,
+        //         childAspectRatio: 0.5,
+        //         crossAxisSpacing: 20,
+        //       ),
+        //       itemBuilder: (context, index) => Container(
+        //         child: FadeInUp(
+        //           child: Column(
+        //             children: [
+        //               Image.asset(
+        //                 'assets/images/watch.png',
+        //                 fit: BoxFit.cover,
+        //               ),
+        //               SizedBox(
+        //                 height: 5,
+        //               ),
+        //               Text(
+        //                 'Skmei Skmei Men Sports\nWatches Casual LED',
+        //                 textAlign: TextAlign.center,
+        //                 style: TextStyle(
+        //                   fontWeight: FontWeight.bold,
+        //                   fontSize: 14,
+        //                   color: Color(0XFF242451),
+        //                 ),
+        //               ),
+        //               SizedBox(
+        //                 height: 10,
+        //               ),
+        //               Row(
+        //                 mainAxisAlignment: MainAxisAlignment.center,
+        //                 children: [
+        //                   Expanded(
+        //                     child: InkWell(
+        //                       onTap: () {},
+        //                       child: Container(
+        //                         padding: EdgeInsets.symmetric(vertical: 5),
+        //                         decoration: BoxDecoration(
+        //                           color: Color(0XFF242451),
+        //                           borderRadius: BorderRadius.circular(20),
+        //                         ),
+        //                         child: Text(
+        //                           '120EPG',
+        //                           textAlign: TextAlign.center,
+        //                           style: TextStyle(
+        //                             fontSize: 14,
+        //                             fontWeight: FontWeight.bold,
+        //                             color: Colors.white,
+        //                           ),
+        //                         ),
+        //                       ),
+        //                     ),
+        //                   ),
+        //                   SizedBox(
+        //                     width: 5,
+        //                   ),
+        //                   Icon(
+        //                     Icons.favorite,
+        //                     color: Color(0XFF242451),
+        //                   ),
+        //                 ],
+        //               ),
+        //             ],
+        //           ),
+        //         ),
+        //       ),
+        //       itemCount: 4,
+        //     ),
+        //     Positioned(
+        //       bottom: 0,
+        //       left: 0,
+        //       child: FloatingActionButton(
+        //         backgroundColor: Color(0XFF242451),
+        //         onPressed: () {},
+        //         child: Icon(Icons.filter_alt),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+      ));
+}
